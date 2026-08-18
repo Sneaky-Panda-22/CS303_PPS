@@ -16,7 +16,7 @@ for word in alpha_sort:
         freq[word] += 1
     else:
         freq[word] = 1
-print(f"alphabetically sorted dictionary:")
+print(f"\nalphabetically sorted dictionary:")
 
 #we use .items() to decrease the load over RAM. if we dont use .items() then it wont know that after we access word, we will access freq[word] too!!
 
@@ -31,7 +31,7 @@ for word, word_f in freq.items():
     print(f"{word} : {word_f}")
 
 sorted_dict = {}
-print("Freq sorted:")
+print("\nFreq sorted:")
 while freq:
     highest_key,highest_val = -1,-1
 
@@ -46,3 +46,11 @@ while freq:
 
 for word,word_f in sorted_dict.items():
     print(f"{word} : {word_f}")
+
+
+ip_word = input("Enter a word: ")
+freq_word = sorted_dict[ip_word]
+print(f"\nWords that have freq same as {ip_word} are: ")
+for word,word_f in sorted_dict.items():
+    if word_f == freq_word and word!=ip_word:
+        print(f"{word} : {word_f}")
