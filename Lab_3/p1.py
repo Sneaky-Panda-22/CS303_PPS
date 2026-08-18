@@ -1,13 +1,17 @@
+
+#PART:1 USING LISTS->
+
 temp = input("Enter string: ")
 text = temp.lower()
 text1 = ""
 
+# text1.join(char for char in text if char not in punctuation)
+
 for c in text:
-    if((c>='a'and c<='z') or c==' '):
+    if((c>='a'and c<='z') or c==' ' or (c>='0' and c<='9')):
         text1 += c
 
-words = text1.split()
-#print(words)
+words = list(text1.split())
 
 alpha_sort = sorted(words)
 print(f"alphabetically sorted : {alpha_sort}")
@@ -20,3 +24,5 @@ for i in range(len(words)):
             words[j],words[j+1] = words[j+1],words[j]
 
 print(f"length wise sorted: {words}")
+
+#BONUS: USING TUPLE->
