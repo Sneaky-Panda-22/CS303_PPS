@@ -42,7 +42,7 @@ print(f"Error in 316061: {error_std2}")
 
 
 #---------------------------------------------------
-# other method by LLM: using scipy are erf
+# other method by LLM: using scipy are erf. np.arange is preferred as it gives higher precision as compared to linspace
 
 # import numpy as np 
 # from scipy.special import erf  # Provides the exact analytical value of the error function
