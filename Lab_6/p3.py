@@ -40,8 +40,8 @@ print(f"Error in 316060: {error_std1}")
 print(f"Error in 316061: {error_std2}")
 
 
-
-#---------------------------------------------------
+# could have also computed this using Z distribution but for that we might need a highly precise table 
+#-----------------------------------------------------------------------------------------------
 # other method by LLM: using scipy are erf. np.arange is preferred as it gives higher precision as compared to linspace
 
 # import numpy as np 
@@ -66,7 +66,6 @@ print(f"Error in 316061: {error_std2}")
 # print("Difference between Right and Left Sum:", abs(right_sum - left_sum))
 
 # # The true analytical value of the integral from 0 to 1 is exactly (sqrt(pi)/2) * erf(1)
-# # Written out in full precision: 0.7468241328124271
 # calculated_val = (np.sqrt(np.pi) / 2) * erf(1)
 
 # n1, n2 = 316060, 316061
